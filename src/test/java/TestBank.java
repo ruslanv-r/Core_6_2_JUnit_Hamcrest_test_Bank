@@ -6,7 +6,7 @@ public class TestBank {
 
 
     @BeforeAll
-public  void setValue() {
+    public void setValue() {
         Account[] accountmentsTest = new Account[]{
                 new SavingsAccount(1_100_000),  //  Сберегательный счет
                 new CreditAccount(-300_000),  //  Кредитный счет
@@ -17,9 +17,13 @@ public  void setValue() {
 
     @Test
     public void testUpZero() {
-
+        Account[] accountmentsTest = new Account[]{
+                new SavingsAccount(1_100_000),  //  Сберегательный счет
+                new CreditAccount(-300_000),  //  Кредитный счет
+                new CheckingAccount(900_000) //  Расчетный счет
+        };
         //Assert.assertTrue(accountmentsTest[0] >= 0); ?
-        Assertions.assertTrue(setValue.accountmentsTest[0] >= 0);
+        Assertions.assertTrue(accountmentsTest[0] >= 0);
         Assertions.assertTrue(accountmentsTest[2] >= 0);
     }
 
@@ -29,7 +33,6 @@ public  void setValue() {
         //Assert.assertTrue(accountmentsTest1[0] >= 0); ?
         Assertions.assertTrue(accountmentsTest[1] <= 0);
     }
-
 
 
     @Test
@@ -46,6 +49,8 @@ public  void setValue() {
                 new CreditAccount(-300_000),  //  Кредитный счет
                 new CheckingAccount(1_100_000) //  Расчетный счет
         };
+
+
 
 
         // when:

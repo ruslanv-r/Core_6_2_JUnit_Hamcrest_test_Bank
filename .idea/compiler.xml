@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Core_6_1_JUnit_test_Bank" />
+        <module name="Core_6_2_JUnit_Hamcrest_test_Bank" />
       </profile>
     </annotationProcessing>
   </component>

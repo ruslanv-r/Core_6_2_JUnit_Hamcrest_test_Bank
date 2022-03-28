@@ -19,9 +19,10 @@ public class TestBank {
                 new CreditAccount(-300_000),  //  Кредитный счет
                 new CheckingAccount(900_000) //  Расчетный счет
         };
-        //Assert.assertTrue(accountmentsTest[0] >= 0); ?
+
         Assertions.assertTrue(accountmentsTest[1].balance <= 0);
-//        Assertions.assertTrue(accountmentsTest[2] >= 0);
+
+
     }
 
     @Test
@@ -81,8 +82,8 @@ public class TestBank {
 
 
 
-        Assertions.assertEquals(accountmentsResult[0].balance,accountmentsTest[0].balance);
-        Assertions.assertEquals(accountmentsResult[2].balance,accountmentsTest[2].balance);
+        assertThat(accountmentsResult[0].balance, Matchers.equalTo(accountmentsTest[0].balance));
+        assertThat(accountmentsResult[2].balance, Matchers.equalTo(accountmentsTest[2].balance));
     }
 
 }
